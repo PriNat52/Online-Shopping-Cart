@@ -1,0 +1,27 @@
+Final Project: Forced Member sign-in shopping cart style.
+
+npm install bootstrap
+npm install --save cookie-parser
+npm install --save expree-session
+
+Database Details:(Total: 3)
+inventoryDB
+cartDB
+customerDB
+
+Note: Changes after Demo/Presentation.
+
+Member Side:
+After valid sign in, Customer name generates successfully.
+Customer shopping details is saved to cartDB.
+Inventory list updates quantity and displayed to the customer.
+Session destoryed.
+
+Admin Side:
+Member cart - Add,Edit and Delete functions are fixed.
+
+Rest API:(Total: 3)
+Search by name, price range and entire shopping list done in both Json and XML
+and executes successfully in Postman.
+
+Thank you for all your effort.
