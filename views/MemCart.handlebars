@@ -1,0 +1,71 @@
+<center>
+  <h2>Add New Product:</h2>
+  <form method="post" action="/admin/memcart/add" onsubmit="return MCA();">
+    <input type="hidden" name="obj_id" value="{{obj_id}}" />
+
+    <table>
+      <tbody>
+         <tr>
+         <th>Member Id*: </th>
+         <td><input type="text" name="c_id" id="c_id" required 
+              placeholder="Enter product item id"></td>
+       </tr>
+       <tr>
+         <th>Item Id: </th>
+         <td><input type="text" name="id" id="id" required 
+              placeholder="Enter product item id"></td>
+       </tr>
+       <tr>
+         <th>Item Name: </th>
+         <td><input type="text" name="name" id="name" required
+              placeholder="Enter product name"></td>
+       </tr>
+        <tr>
+         <th>Quantity: </th>
+         <td><input type="number" name="qty" id="qty" required 
+              placeholder="Enter no. of quantity"></td>
+       </tr>
+        <tr>
+         <th>Price: </th>
+         <td><input type="text" name="price"  id="price" required 
+              placeholder="Enter price"></td>
+       </tr>
+       </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+           <input type="submit" value="Save" class="btn btn-success">
+           <input type="button" value="Cancel" class="btn btn-danger" onclick="cancelAdd();">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+    <div id="c_idError" class="c_idErrorclass" style="background-color:red;">
+				<span style="display:none">
+					Reminder: Please check ID.<br />
+				</span>
+		</div>
+    <div id="mca_idError" class="mca_idErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product id.<br />
+            </span>
+            </div>
+            <div id="mca_nameError" class="mca_nameErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product name.<br />
+            </span>
+            </div>
+            <div id="mca_qtyError" class="mca_qtyErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product qty.<br />
+            </span>
+            </div>
+            <div id="mca_priceError" class="mca_priceErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product price.<br />
+            </span>
+            </div>
+  </form>
+  <ladel>* - Required Field</ladel>
+</center>

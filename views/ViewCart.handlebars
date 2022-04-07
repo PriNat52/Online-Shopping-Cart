@@ -1,0 +1,36 @@
+<div>
+  <center><br />
+	{{#each _data}}
+    <strong>Customer Name:</strong> {{this.c_name}}<br />
+	  <strong>Customer ID:</strong>  {{this.c_id}}<br />
+    <strong>Ordered List</strong>
+		<table>
+			<thead>
+				<tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+				</tr>
+			</thead>
+			<tbody>
+               	{{#each c_list}}
+                     <tr>
+                         <td>{{this.item_id}}</td>
+                         <td>{{this.name}}</td>
+                         <td>{{this.qty}}</td>
+                         <td>{{this.price}}</td>
+                         <input type="hidden" name="obj_mid" value="{{this.obj_mid}}" />
+                     </tr> 
+                 {{/each}}
+            </tbody>
+            <tfoot>
+                <a href="/admin/memcart/add/{{this.obj_id}}">|| Add |</a>
+                <a href="/admin/memcart/delete/{{this.obj_id}}">|| Delete |</a>  
+                 <a href="/admin/memcart/edit/{{this.obj_id}}">|| Edit |</a>              
+            </tfoot>
+		</table><br />
+        {{/each}}
+    </center>
+        
+</div>

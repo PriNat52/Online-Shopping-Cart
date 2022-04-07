@@ -1,0 +1,50 @@
+
+<main>
+    <!-- display a table of items -->
+    <h2>Welcome! Let's Shop!!</h2>
+    
+        <center><h2>Inventory List:</h2>
+        <table>
+           <tbody><tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>&nbsp;</th>
+           </tr>
+           {{#each data}}
+           <tr>
+               <td>
+                   <input type="hidden" name="item_name">{{this.name}}
+                </td>
+               <td>
+                   {{this.description}}
+                </td>
+               <td>
+                   <input type="hidden" name="item_quan">{{this.quantity}}
+                </td>
+               <td>
+                   <input type="hidden" name="item_price">${{this.price}}
+                </td>
+                <input type="hidden" name="item_id" value="{{this.id}}">
+               <td>
+                    <a href='/member/addcart/{{this.obj_id}}' role="button">Add to Cart</a>
+                    <input type="hidden" name="id" value="{{this.obj_id}}">     
+               </td>
+            </tr>
+           {{/each}}
+           </tbody>
+    </table>
+    <br />
+    <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+    </svg>
+    <a href="/member/cart">Your Cart
+    <span class="badge badge-success">{{totalQty}}
+        {{session.cart.totalQty}}
+    </span></a>
+    
+    </div>
+    <br /> 
+    </center>
+</main>

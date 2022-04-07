@@ -1,0 +1,62 @@
+<div class="table-responsive">
+  <center><h2>Edit Item:</h2>
+  <form method="post" action='/admin/memcart/edit' onsubmit="return emc();">
+    <table>
+      <tbody>
+          <tr>
+          <th>Member ID*: </td>
+          <td><input type="text" name="c_id" id="c_id" required size="40" ></td>
+        </tr>
+        <tr>
+          <th>Product ID: </td>
+          <td><input type="text" name="id" id="id" required size="40"></td>
+        </tr>
+        <tr>
+          <th>Product Name: </td>
+          <td><input type="text" name="name" id="name" required size="40" ></td>
+        </tr>
+        <tr>
+          <th>Quantity: </td>
+          <td><input type="number" name="qty" id="qty" required size="40" ></td>
+        </tr>
+        <tr>
+          <th>Price: </td>
+          <td><input type="text" name="price" id="price" required size="40" ></td>
+        </tr>
+        <input type="hidden" name="_id" value="{{_id}}">
+
+      </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+              <input type="submit" value="Update" class="btn btn-success" >
+              <input type="button" value="Cancel" class="btn btn-danger" onclick="cancelAdd()">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+    <div id="emc_idError" class="emc_idErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product id.<br />
+            </span>
+            </div>
+            <div id="emc_nameError" class="emc_nameErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product name.<br />
+            </span>
+            </div>
+            <div id="emc_priceError" class="emc_priceErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product price.<br />
+            </span>
+            </div>
+            <div id="c_idError" class="c_idErrorclass" style="background-color:red;">
+				<span style="display:none">
+					Reminder: Please check ID.<br />
+				</span>
+		</div>
+    <label>* - Required field</label>
+  </form>
+  </center>
+</div>

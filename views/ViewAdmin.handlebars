@@ -1,0 +1,48 @@
+<h2>Hello! Administrator</h2>
+<main>
+    
+    <aside>
+        <!-- display a list of categories -->
+        <h2>Member List:</h2>
+        <nav>
+        <ul>
+            {{#each record}}
+            <li><a href="/admin/memcart/{{this.id}}">{{this.name}}</a></li>
+            {{/each}}
+        </ul>
+        </nav>          
+    </aside>
+
+    <section>
+        <!-- display a table of items -->
+        <center><h2>Product List:</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+            {{#each data}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.description}}</td>
+                <td>{{this.quantity}}</td>
+                <td>${{this.price}}</td>
+                <td>
+					<a href="/admin/edit/{{this._id}}" role="button">Edit</a>
+                </td>
+                <td>
+                    <a href="/admin/delete/{{this._id}}" role="button">Delete</a>
+				</td>
+            </tr>            
+            {{/each}}
+        </table><br />
+        <p><a href="/admin/add" role="button">Add Item</a></p>
+        </center>
+   </section>
+</main>

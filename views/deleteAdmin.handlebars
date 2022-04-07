@@ -1,0 +1,41 @@
+<div class="table-responsive">
+  <center>
+  <h2>Delete After Confirmation</h2>
+  <form method="post" action='/admin/delete' onsubmit="return ValidateDel();">
+    <table>
+      <tbody>
+        <tr>
+          <th>Product Name: </th>
+          <td><input type="text" name="name" id="name" size="40" ></td>
+        </tr>
+        <tr>
+          <th>Price: </th>
+          <td><input type="text" name="price" id="price" size="40"  ></td>
+        </tr>
+        <input type="hidden" name="_id" value="{{data}}">
+       
+      </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+              <input type="submit" value="OK" class="btn btn-success" >
+              <input type="button" value="Cancel" class="btn btn-danger"
+                  class="cancel" onclick="cancelDelete();">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+    <div id="vd_nameError" class="vd_nameErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product name.<br />
+            </span>
+            </div>
+            <div id="vd_priceError" class="vd_priceErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product price.<br />
+            </span>
+            </div>
+  </form>
+  </center>
+</div>

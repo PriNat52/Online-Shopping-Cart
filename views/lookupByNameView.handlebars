@@ -1,0 +1,8 @@
+<!-- Req- Look by Name View page -->
+
+<b>Product Name:{{#each data}} {{this.name}}</b>
+<br />
+<p>Product ID: {{this._id}} <br /> Description: {{this.description}} <br />
+Quantity: {{this.quantity}} <br /> Price: {{this.price}}</p>
+<br />
+{{/each}}

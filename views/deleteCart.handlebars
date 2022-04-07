@@ -1,0 +1,50 @@
+<div class="table-responsive">
+  <center>
+    <h2>Delete After Confirmation:</h2>
+  <form method="post" action='/admin/memcart/delete' onsubmit="return dmc();">
+  <label>* - Required fields</label> 
+    <table>
+      <tbody>
+          <tr>
+          <th>Member Id*: </th>
+          <td><input type="text" name="c_id" id="c_id" required size="40" ></td>
+        </tr>
+          <tr>
+          <th>Product Name: </th>
+          <td><input type="text" name="name" id="name" required size="40" ></td>
+        </tr>
+        <tr>
+          <th>Product ID*:</th>
+          <td><input type="text" name="id" id="id" required size="40" ></td>
+        </tr>
+        <input type="hidden" name="obj_mid" value="{{obj_mid}}">
+        </tbody>
+        <tfooter>
+        <tr>
+          <td></td>
+          <td>
+              <input type="submit" value="OK" class="btn btn-success">
+              <input type="button" value="Cancel" class="btn btn-danger"
+                  class="cancel" onclick="cancelDelete();">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+    <div id="dmc_nameError" class="dmc_nameErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product name.<br />
+            </span>
+            </div>
+            <div id="dmc_idError" class="dmc_idErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product ID.<br />
+            </span>
+            </div>
+            <div id="c_idError" class="c_idErrorclass" style="background-color:red;">
+				<span style="display:none">
+					Reminder: Please check ID.<br />
+				</span>
+		</div>
+  </form>
+  </center>
+</div>

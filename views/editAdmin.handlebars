@@ -1,0 +1,62 @@
+<div class="table-responsive">
+  <center>
+    <h2>Edit Product Details:</h2>
+  <form method="post" action='/admin/edit' onsubmit="return ValidEdit();">
+    <table>
+      <tbody>
+        <tr>
+          <th>Product ID: </td>
+          <td><input type="text" name="id"  id="id" required size="40" 
+                  value="{{data.id}}"></td>
+        </tr>
+        <tr>
+          <th>Product Name: </td>
+          <td><input type="text" name="name" id="name"required size="40" 
+                  value="{{data.name}}"></td>
+        </tr>
+        <tr>
+          <th>Description: </td>
+          <td><input type="text" name="desc" id="desc"required size="40" 
+                  value="{{data.desc}}"></td>
+        </tr>
+        <tr>
+          <th>Quantity: </td>
+          <td><input type="number" name="qty" id="qty" required size="40" 
+                  value="{{data.qty}}"></td>
+        </tr>
+        <tr>
+          <th>Price: </td>
+          <td><input type="text" name="price" id="price" required size="40" 
+                  value="{{data.price}}"></td>
+        </tr>
+        <input type="hidden" name="_id" value="{{data._id}}">
+
+      </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+              <input type="submit" value="Update" class="btn btn-success" >
+              <input type="button" value="Cancel" class="btn btn-danger" onclick="cancelAdd()">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+  </form>
+  <div id="ve_idError" class="ve_idErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product id.<br />
+            </span>
+            </div>
+            <div id="ve_nameError" class="ve_nameErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product name.<br />
+            </span>
+            </div>
+            <div id="ve_priceError" class="ve_priceErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product price.<br />
+            </span>
+            </div>
+  </center>
+</div>

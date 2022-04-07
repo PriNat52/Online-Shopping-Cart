@@ -1,0 +1,41 @@
+/* the styles for the html elements */
+
+header {
+    margin: 0;
+    border: 2px solid black;
+} 
+header h1 {
+    margin: 0;
+    padding: .5em 0;
+    color: black;
+}
+main {
+    margin: 0;
+}
+aside {
+    float: left;
+    width: 150px;
+}
+
+footer {
+    margin-top: 1em;
+    text-align: center;
+    font-style: normal;
+    font-size: 90%;
+    display: block;
+}
+
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    font-size: large;
+}
+td, th {
+    border: 1px solid black;
+    padding: .2em .5em .2em .5em;
+    vertical-align: top;
+    text-align: center;
+}
+
+

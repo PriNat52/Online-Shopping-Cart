@@ -1,0 +1,29 @@
+ <!--Add to Cart -->
+<center><br />
+        {{#if product}}
+        Shopping Cart:<br /><br />
+        <table>
+           <tr>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+           </tr>
+           {{#each product}}
+           <tr>
+                <td><input type="hidden" name="iname">{{this.item.item_Name}}</td>
+                <td><input type="hidden" name="iquantity" value="{{this.qty}}" />{{this.qty}}</td>
+                <td><input type="hidden" name="iprice">${{this.price}}</td>
+           </tr>
+           {{/each}}
+        </table><br /> 
+        <label>Total Price: ${{totalPrice}}</label>
+        <br />
+        <a href="/member">
+          View Inventory list <span class="badge badge-success">{{totalQty}}</span></a> ||
+        <a href="/member/cart/signin">Please Check-in to place your order</a>
+        {{else}}
+        <p>No Items in the Cart.</p>
+        {{/if}}
+        
+          
+</center>

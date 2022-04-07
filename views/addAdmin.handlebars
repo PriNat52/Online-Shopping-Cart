@@ -1,0 +1,64 @@
+<center>
+  <h2>Add New Product:</h2>
+  <form method="post" action="/admin/add" onsubmit="return Validate();">
+    <table>
+      <tbody>
+       <tr>
+         <th>Id: </th>
+         <td><input type="text" name="p_id" id="p_id" required 
+              placeholder="Enter product id"></td>
+       </tr>
+       <tr>
+         <th>Name: </th>
+         <td><input type="text" name="p_name" id="p_name" required
+              placeholder="Enter product name"></td>
+       </tr>
+       <tr>
+         <th>Description: </th>
+         <td><input type="text" name="desc" 
+              placeholder="Enter description"></td>
+       </tr>
+        <tr>
+         <th>Quantity: </th>
+         <td><input type="number" name="qty" id="qty" required 
+              placeholder="Enter no. of quantity"></td>
+       </tr>
+        <tr>
+         <th>Price: </th>
+         <td><input type="text" name="price" id="price" required 
+              placeholder="Enter price"></td>
+       </tr>
+       </tbody>
+      <tfooter>
+        <tr>
+          <td>
+          </td>
+          <td>
+           <input type="submit" value="Save" class="btn btn-success">
+           <input type="button" value="Cancel" class="btn btn-danger" onclick="cancelAdd();">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+            <div id="p_idError" class="p_idErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product id.<br />
+            </span>
+            </div>
+            <div id="p_nameError" class="p_nameErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product name.<br />
+            </span>
+            </div>
+            <div id="qtyError" class="qtyErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product qty.<br />
+            </span>
+            </div>
+            <div id="priceError" class="priceErrorclass" style="background-color:red;">
+            <span style="display:none">
+            Reminder: Please check product price.<br />
+            </span>
+            </div>
+  </form>
+</center>

@@ -1,0 +1,30 @@
+<center><br />
+<form method="post" action="/member/cart/order">
+{{#each data}}<br /><br />
+    <strong>Customer Name:</strong><input type="hidden" name="name" value="{{this.name}}">{{this.name}}<br />
+	<strong>Customer ID:</strong><input type="hidden" name="id" value="{{this.id}}">{{this.id}}<br />
+{{/each}}
+<br /><br />
+        {{#if product}}
+        <table>
+           <tr>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+           </tr>
+           {{#each product}}
+           <tr>
+                <td><input type="hidden" name="iname">{{this.item.item_Name}}</td>
+                <td><input type="hidden" name="iquantity">{{this.qty}}</td>
+                <td><input type="hidden" name="iprice">${{this.price}}</td>
+           </tr>
+           {{/each}}
+        </table>
+        <label>Total Price: ${{totalPrice}}</label>
+        {{else}}
+        <p>No Items in the Cart.</p>
+        {{/if}}
+        <br /> <br />
+         <input type="submit" value="Place Order!" class="btn btn-success" onclick="alert('Thank you for your Purchase!');">
+      </form>
+</center>
