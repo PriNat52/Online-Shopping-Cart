@@ -7,14 +7,16 @@ var router = express.Router();
 //Importing Databases
 const inventoryDB = require('../inventoryDB.js');
 const Inventory = inventoryDB.getModel();
+
 // customer database
 const customerDB = require('../customerDB.js');
 const Member = customerDB.getModel();
+
 //cart database
 const cartDB = require('../cartDB');
 const MemCart = cartDB.getModel();
 
-var Cart 			= require("../displayOrderedItems");
+var Cart = require("../displayOrderedItems");
 
 // router specs
 router.get('/', function(req, res, next) {
